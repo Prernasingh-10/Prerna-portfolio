@@ -5,68 +5,153 @@
   <title>Prerna Singh | UI/UX Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Icons -->
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style> body {
+    <style>
+        body {
   font-family: 'Poppins', sans-serif;
-  padding-top: 70px;
+  padding-top: 80px;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .hero {
   background: linear-gradient(135deg, #5f2c82, #49a09d);
-  color: white;
-  padding: 100px 0;
+  color: #fff;
+  padding: 140px 0;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
 }
 
 .profile-img {
-  width: 140px;
+  width: 160px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  border: 5px solid #fff;
 }
 
 .section {
-  padding: 80px 0;
+  padding: 90px 0;
 }
 
 .section-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 50px;
   text-align: center;
-  margin-bottom: 40px;
 }
 
-#skills img {
-  width: 60px;
+.section-text {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.experience-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.tool-category {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.skill-icon img {
+  width: 64px;
   transition: transform 0.3s;
 }
 
-#skills img:hover {
+.skill-icon img:hover {
   transform: scale(1.2);
 }
-</style>
+
+.skill-icon p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #5f2c82;
+  text-decoration: none;
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+}
+
+    </style>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow">
   <div class="container">
-    <a class="navbar-brand" href="#">Prerna Singh</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    <a class="navbar-brand fw-bold" href="#">Prerna Singh</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto">
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Tools</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item">
-          <a class="btn btn-primary ms-3" href="assets/Prerna_Singh_CV.pdf" download>
-            Download CV
+        <li class="nav-item ms-lg-3">
+          <a href="assets/Prerna_Singh_CV.pdf" download class="btn btn-primary px-4">
+            <i class="bi bi-download"></i> Download CV
           </a>
         </li>
       </ul>
@@ -75,23 +160,23 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero text-center">
-  <div class="container">
-    <img src="assets/profile.png" class="profile-img" alt="Prerna Singh">
-    <h1>UI/UX Designer & Visual Computing Student</h1>
-    <p>Designing user-centered digital experiences</p>
+<section class="hero">
+  <div class="container text-center" data-aos="fade-up">
+    <img src="assets/profile.png" class="profile-img mb-4" alt="Prerna Singh">
+    <h1 class="hero-title">UI/UX Designer & Visual Computing Student</h1>
+    <p class="hero-subtitle">Designing user-centered digital experiences</p>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
-  <div class="container">
+  <div class="container" data-aos="fade-right">
     <h2 class="section-title">Professional Summary</h2>
-    <p>
-      Master’s student in Computer Science specializing in <b>Human Computer Interaction and Visual Computing</b> at TU Darmstadt.
-      Creative UX/UI Designer with <b>1.5+ years of freelance experience</b> and internship exposure.
-      Strong in <b>User-Centered Design</b>, cross-functional collaboration, and visual communication.
-      Fluent in English, familiar with German, and known for a proactive, can-do attitude.
+    <p class="section-text text-center">
+      Master’s student in Computer Science specializing in <strong>Human Computer Interaction
+      and Visual Computing</strong> at TU Darmstadt. Creative UX/UI Designer with
+      <strong>1.5+ years of freelance experience</strong> and internship exposure.
+      Strong in user-centered design, cross-functional collaboration, and visual communication.
     </p>
   </div>
 </section>
@@ -99,57 +184,65 @@
 <!-- EXPERIENCE -->
 <section id="experience" class="section bg-light">
   <div class="container">
-    <h2 class="section-title">Experience</h2>
+    <h2 class="section-title" data-aos="fade-up">Experience</h2>
 
-    <div class="card mb-3">
-      <div class="card-body">
-        <h5>UX Researcher – Student Research Assistant</h5>
-        <p class="text-muted">Fraunhofer IGD, Darmstadt | Oct 2025 – Present</p>
-        <ul>
-          <li>Conduct UX-focused research for visual computing applications</li>
-          <li>Analyze interaction concepts and improve usability</li>
-          <li>Create wireframes, user flows, and UX concepts</li>
-        </ul>
-      </div>
+    <div class="experience-card" data-aos="fade-up">
+      <h4>UX Researcher – Student Research Assistant</h4>
+      <span>Fraunhofer IGD, Darmstadt | Oct 2025 – Present</span>
+      <ul>
+        <li>UX research for visual computing software</li>
+        <li>User-centered redesign of interaction concepts</li>
+        <li>Wireframes, user flows, UX improvements</li>
+      </ul>
     </div>
 
-    <div class="card mb-3">
-      <div class="card-body">
-        <h5>UX/UI Designer Intern</h5>
-        <p class="text-muted">Enertics India Pvt. Ltd. | Jan 2024 – Jul 2024</p>
-        <ul>
-          <li>Designed web and mobile interfaces using UCD principles</li>
-          <li>Created prototypes and presentations in Figma & Canva</li>
-          <li>Collaborated with developers and stakeholders</li>
-        </ul>
-      </div>
+    <div class="experience-card" data-aos="fade-up">
+      <h4>UX/UI Designer Intern</h4>
+      <span>Enertics India Pvt. Ltd. | Jan 2024 – Jul 2024</span>
+      <ul>
+        <li>Web & mobile UI design using UCD principles</li>
+        <li>Figma prototypes & design documentation</li>
+        <li>Cross-functional collaboration</li>
+      </ul>
     </div>
 
-    <div class="card">
-      <div class="card-body">
-        <h5>Freelance UX/UI Designer</h5>
-        <p class="text-muted">Remote | Aug 2022 – Jan 2024</p>
-        <ul>
-          <li>Delivered user-centered web & mobile designs</li>
-          <li>Worked directly with international clients</li>
-          <li>Managed multiple projects independently</li>
-        </ul>
-      </div>
+    <div class="experience-card" data-aos="fade-up">
+      <h4>Freelance UX/UI Designer</h4>
+      <span>Remote | Aug 2022 – Jan 2024</span>
+      <ul>
+        <li>Client-focused web & mobile UI solutions</li>
+        <li>Independent project management</li>
+        <li>International client communication</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- TOOLS -->
 <section id="skills" class="section">
   <div class="container text-center">
-    <h2 class="section-title">Tools & Technologies</h2>
-    <div class="row g-4">
-      <div class="col-4 col-md-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"></div>
-      <div class="col-4 col-md-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"></div>
-      <div class="col-4 col-md-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></div>
-      <div class="col-4 col-md-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"></div>
-      <div class="col-4 col-md-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"></div>
-      <div class="col-4 col-md-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg"></div>
+    <h2 class="section-title" data-aos="fade-up">Tools & Technologies</h2>
+
+    <h5 class="tool-category">Design</h5>
+    <div class="row g-4 justify-content-center mb-4">
+      <div class="col-4 col-md-2 skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"><p>Figma</p></div>
+      <div class="col-4 col-md-2 skill-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg"><p>Canva</p></div>
+      <div class="col-4 col-md-2 skill-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/CorelDRAW_Icon.png"><p>CorelDRAW</p></div>
+      <div class="col-4 col-md-2 skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg"><p>Blender</p></div>
+    </div>
+
+    <h5 class="tool-category">Frontend</h5>
+    <div class="row g-4 justify-content-center mb-4">
+      <div class="col-4 col-md-2 skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><p>HTML</p></div>
+      <div class="col-4 col-md-2 skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><p>CSS</p></div>
+      <div class="col-4 col-md-2 skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"><p>Bootstrap</p></div>
+    </div>
+
+    <h5 class="tool-category">Productivity</h5>
+    <div class="row g-4 justify-content-center">
+      <div class="col-4 col-md-2 skill-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg"><p>Excel</p></div>
+      <div class="col-4 col-md-2 skill-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Word_2013-2019_logo.svg"><p>Word</p></div>
+      <div class="col-4 col-md-2 skill-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_PowerPoint_2013-2019_logo.svg"><p>PowerPoint</p></div>
     </div>
   </div>
 </section>
@@ -157,50 +250,54 @@
 <!-- PROJECTS -->
 <section id="projects" class="section bg-light">
   <div class="container">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title" data-aos="fade-up">Projects</h2>
 
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="assets/wallet-ui.png" class="card-img-top">
-          <div class="card-body">
-            <h5>iOS E-Wallet App</h5>
-            <p>Secure mobile banking UI design</p>
-            <a href="https://www.figma.com/design/I7NXkMdiPvLgnzuwjeLAvl/E-Wallet-iOS-ui?node-id=0-1&t=9k8ZqwAoxxcfY36W-1" target="_blank" class="btn btn-outline-primary">
-              View on Figma
-            </a>
-          </div>
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="project-card">
+          <img src="assets/ios-wallet.png">
+          <h5>iOS E-Wallet App</h5>
+          <p>Secure iOS wallet UI with smooth transaction flows</p>
+          <a href="https://www.figma.com/design/I7NXkMdiPvLgnzuwjeLAvl/E-Wallet-iOS-ui?node-id=0-1&t=9k8ZqwAoxxcfY36W-1" target="_blank">
+            View on Figma
+          </a>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card">
-          <img src="assets/netflix-ui.png" class="card-img-top">
-          <div class="card-body">
-            <h5>Netflix Mobile UI</h5>
-            <p>Design system & interaction study</p>
-          </div>
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="project-card">
+          <img src="assets/food-website.png">
+          <h5>Food Ordering Website</h5>
+          <p>Responsive food ordering website UI</p>
+          <a href="https://www.figma.com/design/6MSC0sdIWe2IMNnsy6Q2v8/Food-ordering-website?node-id=0-1&t=2019GLjbR6FSC5t0-1" target="_blank">
+            View on Figma
+          </a>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card">
-          <img src="assets/food-ui.png" class="card-img-top">
-          <div class="card-body">
-            <h5>Food Ordering Website</h5>
-            <p>Responsive end-to-end UX</p>
-          </div>
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="project-card">
+          <img src="assets/netflix-app.png">
+          <h5>Netflix Mobile App UI</h5>
+          <p>Netflix UI replication & UX analysis</p>
+          <a href="https://www.figma.com/design/864boBDrhGm1RJJH57NbDK/NETFLIX?node-id=0-1&t=TQLFZs3L1BuDUh16-1" target="_blank">
+            View on Figma
+          </a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="text-center p-4 bg-dark text-white">
+<footer class="footer">
   © 2025 Prerna Singh | UI/UX Designer
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000, once: true });</script>
+
 </body>
 </html>
